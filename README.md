@@ -12,12 +12,11 @@ The modules includes additional source, tests and resource directories from the 
 
 ### Getting started
 
-You need [Apache Maven](https://maven.apache.org/) to build the project.
-To do this, execute this commands from the project root directory.
+You need [Apache Maven](https://maven.apache.org/) to build the project. Execute the commands from the project root directory.
 
 ```
   $ cd MavenReactor
-	$ mvn clean install
+  $ mvn clean install
 ```  
 
 Note: When you specify clean, you make sure that Maven is going to remove old output before it compiles and packages an application.
@@ -27,7 +26,12 @@ Note: When you specify clean, you make sure that Maven is going to remove old ou
 
 [Guide to Working with Multiple Modules](https://maven.apache.org/guides/mini/guide-multiple-modules.html)
 
-----------------------------------
 
+### License
 The license is committed to the repository in the project folder as `LICENSE.txt`.
 Please see the `LICENSE.txt` file for full informations.
+
+
+----------------------------------
+
+Markus Eschenbach - http://www.blogging-it.com
