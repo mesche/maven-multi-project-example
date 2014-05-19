@@ -44,7 +44,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
                 <version>1.8</version>
-                <!-- for production it it better to configure the plugin in the reactor pom.xml -->
+                <!-- for production it its better to configure the plugin in the reactor pom.xml -->
                 <executions>
                     <!-- 
                          add additional source directories to the project
