@@ -29,9 +29,24 @@
     </licenses>
         
     <properties>
+        <!-- specify the encoding once per entire project -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        
+        <!-- 
+            specify the maven-compiler-plugin compiler versions for the application sources
+            http://maven.apache.org/plugins/maven-compiler-plugin/compile-mojo.html#source
+            http://maven.apache.org/plugins/maven-compiler-plugin/compile-mojo.html#target
+        -->
         <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>        
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <!-- 
+            specify the maven-compiler-plugin compiler versions for the application test sources
+            http://maven.apache.org/plugins/maven-compiler-plugin/testCompile-mojo.html#testSource
+            http://maven.apache.org/plugins/maven-compiler-plugin/testCompile-mojo.html#testTarget
+
+            <maven.compiler.testSource>1.7</maven.compiler.testSource>
+            <maven.compiler.testTarget>1.7</maven.compiler.testTarget>
+        -->
     </properties>  
            
     <modules>

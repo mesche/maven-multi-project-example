@@ -29,14 +29,11 @@
         <groupId>com.blogging-it</groupId>
         <artifactId>MavenReactor</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <!-- Set the relativePath attribute when module is not in a subfolder of the reactor project -->    
+        <!-- Set the relativePath attribute when module is not installed in a repository or module is not in a subfolder of the reactor project -->    
         <!-- <relativePath>../MavenReactor/pom.xml</relativePath> -->
     </parent>    
     
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
         <project.parent.dir>${project.parent.basedir}</project.parent.dir>
     </properties>
         
@@ -47,8 +44,12 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
                 <version>1.8</version>
+                <!-- for production it it better to configure the plugin in the reactor pom.xml -->
                 <executions>
-                    <!-- add additional source directories to the project -->
+                    <!-- 
+                         add additional source directories to the project
+                         It works but it is not recommended - better use own dependency
+                    -->
                     <execution>
                         <id>add-source</id>
                         <phase>generate-sources</phase>
@@ -61,7 +62,10 @@
                             </sources>
                         </configuration>
                     </execution>
-                    <!-- add additional test source directories to the project -->
+                    <!-- 
+                        add additional test source directories to the project 
+                        It works but it is not recommended - better use http://maven.apache.org/plugins/maven-remote-resources-plugin/
+                    -->
                     <execution>
                         <id>add-test-source</id>
                         <phase>generate-test-sources</phase>
@@ -75,23 +79,7 @@
                         </configuration>
                     </execution>                    
                 </executions>
-            </plugin>            
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.4.3</version>
-                <configuration>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
+            </plugin>                               
         </plugins>
     </build>
 </project>
